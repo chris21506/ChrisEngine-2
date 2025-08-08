@@ -98,14 +98,21 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;C:\Users\acome\OneDrive\Documentos\Unreal Projects\ChrisEngine-2\ThirdParties\imgui-sfml-master;C:\Users\acome\OneDrive\Documentos\Unreal Projects\ChrisEngine-2\ThirdParties\SFML-3.0.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\acome\OneDrive\Documentos\Unreal Projects\ChrisEngine-2\ThirdParties\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(SolutionDir)/lib/$(PlatformTarget)/$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -157,15 +164,14 @@
     <ClCompile Include="..\ThirdParties\imgui-master\imgui_tables.cpp" />
     <ClCompile Include="..\ThirdParties\imgui-master\imgui_widgets.cpp" />
     <ClCompile Include="..\ThirdParties\imgui-sfml-master\imgui-SFML.cpp" />
-    <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="A_Racer.cpp" />
-    <ClCompile Include="BaseApp.cpp" />
-    <ClCompile Include="CShape.cpp" />
-    <ClCompile Include="EngineGUI.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="src\A_Racer.cpp" />
+    <ClCompile Include="src\BaseApp.cpp" />
+    <ClCompile Include="src\CShape.cpp" />
+    <ClCompile Include="src\EngineGUI.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

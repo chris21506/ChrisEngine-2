@@ -1,57 +1,51 @@
-// EngineGUI.cpp - ChrisEngine
-
 #include "EngineGUI.h"
 #include "Window.h"
 #include "Actor.h"
 
 void EngineGUI::init(const EngineUtilities::TSharedPointer<Window>& window) {
-    // Inicialización de la GUI
+    // Implementación pendiente
 }
 
-void EngineGUI::update(const EngineUtilities::TSharedPointer<Window>& window,
-    sf::Time deltaTime) {
-    // Actualización de la GUI
+void EngineGUI::update(const EngineUtilities::TSharedPointer<Window>& window, sf::Time deltaTime) {
+    // Implementación pendiente
 }
 
 void EngineGUI::render(const EngineUtilities::TSharedPointer<Window>& window) {
-    // Renderizado de la GUI
+    // Implementación pendiente
 }
 
 void EngineGUI::destroy() {
-    // Liberación de recursos de la GUI
+    // Implementación pendiente
 }
 
 void EngineGUI::processEvent(const sf::Window& window, const sf::Event& event) {
-    // Procesamiento de eventos de la GUI
+    // Implementación pendiente
 }
 
 void EngineGUI::setupGreyGUIStyle() {
-    // Configuración del estilo gris
+    // Implementación pendiente
 }
 
 void EngineGUI::setupDarkGUIStyle() {
-    // Configuración del estilo oscuro
+    // Implementación pendiente
 }
 
 void EngineGUI::barMenu() {
-    // Creación de la barra de menú
+    // Implementación pendiente
 }
 
 void EngineGUI::outliner(const std::vector<EngineUtilities::TSharedPointer<Actor>>& actors) {
-    // Vista jerárquica de actores
+    // Implementación pendiente
 }
 
 void EngineGUI::console(const std::map<ConsolErrorType, std::vector<std::string>>& programMessages) {
-    // Consola de mensajes
+    // Implementación pendiente
 }
 
 void EngineGUI::inspector(const std::vector<EngineUtilities::TSharedPointer<Actor>>& actors) {
-    // Inspector de propiedades de actores
+    // Implementación pendiente
 }
 
-void EngineGUI::vec2Control(const std::string& label,
-    float* values,
-    float resetValues,
-    float columnWidth) {
-    // Control de edición de vectores 2D
+void EngineGUI::vec2Control(const std::string& label, float* values, float resetValues, float columnWidth) {
+    // Implementación pendiente
 }
