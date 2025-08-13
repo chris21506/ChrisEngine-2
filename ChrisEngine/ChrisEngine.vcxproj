@@ -164,6 +164,7 @@
     <ClCompile Include="..\ThirdParties\imgui-master\imgui_tables.cpp" />
     <ClCompile Include="..\ThirdParties\imgui-master\imgui_widgets.cpp" />
     <ClCompile Include="..\ThirdParties\imgui-sfml-master\imgui-SFML.cpp" />
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="src\A_Racer.cpp" />
     <ClCompile Include="src\BaseApp.cpp" />
     <ClCompile Include="src\CShape.cpp" />
