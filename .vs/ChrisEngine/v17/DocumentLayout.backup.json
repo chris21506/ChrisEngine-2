@@ -1,0 +1,392 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ResourceManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\Prerequisites.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\EngineGUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\CShape.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\BaseApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\A_Racer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\BaseApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\BaseApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\CShape.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\CShape.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\A_Racer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\A_Racer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\ResourceManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\ResourceManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\EngineGUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ChrisEngine\\src\\EngineGUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Component.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\CVector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ThirdParties\\imgui-sfml-master\\imgui-SFML.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:ThirdParties\\imgui-sfml-master\\imgui-SFML.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\THIRDPARTIES\\IMGUI-SFML-MASTER\\IMGUI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AE663B83-190E-4E5D-9FD2-6FD3DA743CB4}|ChrisEngine\\ChrisEngine.vcxproj|solutionrelative:THIRDPARTIES\\IMGUI-SFML-MASTER\\IMGUI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseApp.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\BaseApp.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\BaseApp.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\BaseApp.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\BaseApp.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-08T21:26:44.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "A_Racer.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\A_Racer.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\A_Racer.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\A_Racer.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\A_Racer.h",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:25:21.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseApp.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\BaseApp.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\BaseApp.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\BaseApp.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\BaseApp.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:25:24.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CShape.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\CShape.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\CShape.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\CShape.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\CShape.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:25:26.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EngineGUI.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\EngineGUI.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\EngineGUI.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\EngineGUI.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\EngineGUI.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:25:27.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Prerequisites.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\Prerequisites.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\Prerequisites.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\Prerequisites.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\Prerequisites.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:25:29.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResourceManager.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ResourceManager.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ResourceManager.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ResourceManager.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ResourceManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-13T17:19:43.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\Window.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\Window.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\Window.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\Window.h",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAF8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:25:31.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Texture.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\Texture.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\Texture.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\Texture.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\Texture.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T04:43:08.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CShape.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\CShape.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\CShape.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\CShape.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\CShape.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T05:23:03.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Actor.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\Actor.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\Actor.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\Actor.cpp",
+              "RelativeToolTip": "ChrisEngine\\Actor.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T09:02:03.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "A_Racer.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\A_Racer.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\A_Racer.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\A_Racer.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\A_Racer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-08T21:26:42.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\Window.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\Window.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\Window.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\Window.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T05:33:47.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\main.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\main.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\main.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T05:28:30.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ResourceManager.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\ResourceManager.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\ResourceManager.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\ResourceManager.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\ResourceManager.cpp",
+              "ViewState": "AgIAABcAAAAAAAAAAAAkwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T05:30:50.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EngineGUI.cpp",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\EngineGUI.cpp",
+              "RelativeDocumentMoniker": "ChrisEngine\\src\\EngineGUI.cpp",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ChrisEngine\\src\\EngineGUI.cpp",
+              "RelativeToolTip": "ChrisEngine\\src\\EngineGUI.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T05:25:27.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Component.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Component.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Component.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Component.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Component.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:38:02.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CVector2.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\CVector2.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\CVector2.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\CVector2.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\CVector2.h",
+              "ViewState": "AgIAACwAAAAAAAAAAAAkwEQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:39:56.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Transform.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Transform.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Transform.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Transform.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Transform.h",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:43:38.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Texture.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Texture.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Texture.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Texture.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Texture.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:42:39.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Entity.h",
+              "DocumentMoniker": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Entity.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Entity.h",
+              "ToolTip": "C:\\Users\\acome\\Downloads\\ChrisEngineHeaders\\ECS\\Entity.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\ChrisEngineHeaders\\ECS\\Entity.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAkwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T21:41:38.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "imgui-SFML.h",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ThirdParties\\imgui-sfml-master\\imgui-SFML.h",
+              "RelativeDocumentMoniker": "ThirdParties\\imgui-sfml-master\\imgui-SFML.h",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ThirdParties\\imgui-sfml-master\\imgui-SFML.h",
+              "RelativeToolTip": "ThirdParties\\imgui-sfml-master\\imgui-SFML.h",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAkwIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T22:20:22.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "imgui.h",
+              "DocumentMoniker": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ThirdParties\\imgui-sfml-master\\imgui.h",
+              "RelativeDocumentMoniker": "ThirdParties\\imgui-sfml-master\\imgui.h",
+              "ToolTip": "C:\\Users\\acome\\OneDrive\\Documentos\\Unreal Projects\\ChrisEngine-2\\ThirdParties\\imgui-sfml-master\\imgui.h",
+              "RelativeToolTip": "ThirdParties\\imgui-sfml-master\\imgui.h",
+              "ViewState": "AgIAAA0BAAAAAAAAAAArwCYBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-08T22:20:30.658Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
