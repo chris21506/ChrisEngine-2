@@ -1,97 +1,102 @@
-#include "Window.h"
+#include <SFML/Graphics.hpp>
+#include <memory>
+#include <vector>
+#include <string>
 #include <iostream>
 
-Window::Window(int width, int height, const std::string & title) {
-    // Crea sf::RenderWindow dentro de un TUniquePtr (propiedad exclusiva del wrapper)
-    m_windowPtr = EngineUtilities::MakeUnique<sf::RenderWindow>(
-        sf::VideoMode({ static_cast<unsigned>(width), static_cast<unsigned>(height) }),
-        title
-    );
+// ------------------------------------------------
+// Clase Actor: representa corredor o pista
+// ------------------------------------------------
+class Actor {
+    sf::Sprite sprite;
+    sf::Texture texture;
 
-    // Si la creación fue exitosa, configura límites y vista inicial
-    if (m_windowPtr && m_windowPtr->isOpen()) {
-        m_windowPtr->setFramerateLimit(60);     // cap de FPS (más estable para debug)
-        m_view = m_windowPtr->getDefaultView(); // guarda la vista por defecto
-        MESSAGE("Window", "Window", "Created successfully");
+public:
+    std::string name;
+
+    Actor(const std::string& filename, const std::string& actorName) : name(actorName) {
+        if (!texture.loadFromFile(filename)) {
+            std::cerr << "Error cargando textura: " << filename << "\n";
+        }
+        sprite.setTexture(texture);
+        // Centrar origen para rotaciones escalado
+        sf::FloatRect bounds = sprite.getLocalBounds();
+        sprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
     }
-    else {
-        ERROR("Window", "Window", "Failed to create RenderWindow");
+
+    void setPosition(float x, float y) { sprite.setPosition(x, y); }
+    void setScale(float sx, float sy) { sprite.setScale(sx, sy); }
+    void setRotation(float angle) { sprite.setRotation(angle); }
+
+    void render(sf::RenderWindow& window) { window.draw(sprite); }
+};
+
+// ------------------------------------------------
+// Clase Window: encapsula sf::RenderWindow
+// ------------------------------------------------
+class ChrisEngineWindow {
+    std::unique_ptr<sf::RenderWindow> window;
+
+public:
+    ChrisEngineWindow(int width, int height, const std::string& title) {
+        window = std::make_unique<sf::RenderWindow>(sf::VideoMode(width, height), title);
+        window->setFramerateLimit(60);
     }
-}
 
-// Destructor: asegura limpieza ordenada
-Window::~Window() {
-    destroy();
-}
+    bool isOpen() const { return window->isOpen(); }
+    void clear() { window->clear(sf::Color::Black); }
+    void display() { window->display(); }
+    void draw(sf::Drawable& drawable) { window->draw(drawable); }
 
-// Bucle de eventos: despacha a callback y maneja cierre de ventana
-void Window::handleEvents(const std::function<void(const sf::Event&)>& callback) {
-    if (!m_windowPtr) return;
-
-    // En SFML 3, pollEvent() retorna std::optional<sf::Event>
-    while (auto event = m_windowPtr->pollEvent()) {
-        // Si hay callback del usuario, se invoca con el evento actual
-        if (callback) callback(*event);
-
-        // Cierre de ventana solicitado
-        if (event->is<sf::Event::Closed>()) {
-            close();
+    void handleEvents() {
+        sf::Event event;
+        while (window->pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                window->close();
         }
     }
-}
 
-// ¿La ventana sigue abierta?
-bool Window::isOpen() const {
-    if (!m_windowPtr) return false;
-    return m_windowPtr->isOpen();
-}
+    sf::RenderWindow& getInternal() { return *window; }
+};
 
-// Limpia el backbuffer con un color (negro por defecto)
-void Window::clear(const sf::Color& color) {
-    if (!m_windowPtr) return;
-    m_windowPtr->clear(color);
-}
+// ------------------------------------------------
+// Función principal
+// ------------------------------------------------
+int main() {
+    ChrisEngineWindow window(1024, 768, "ChrisEngine Carrera");
 
-// Dibuja cualquier sf::Drawable con estados opcionales
-void Window::draw(const sf::Drawable& drawable, const sf::RenderStates& states) {
-    if (!m_windowPtr) return;
-    m_windowPtr->draw(drawable, states);
-}
+    // Crear actores
+    Actor pista("pista de carreras.png", "Pista");
+    pista.setPosition(512, 384); // centro
 
-// Presenta en pantalla el contenido del frame
-void Window::display() {
-    if (!m_windowPtr) return;
-    m_windowPtr->display();
-}
+    Actor princesa("princesa.png", "Princesa");
+    princesa.setPosition(200, 600);
 
-// Actualiza deltaTime usando un reloj interno; llamar una vez por frame
-void Window::update() {
-    if (!m_windowPtr) return;
-    deltaTime = clock.restart(); // tiempo transcurrido desde el último frame
-}
+    Actor sonic("sonic.png", "Sonic");
+    sonic.setPosition(400, 600);
 
-// Paso de render adicional (placeholder para overlays o debug propio)
-void Window::render() {
-    // Actualmente no hace nada; útil si quieres dibujar HUD fuera de ImGui.
-}
+    Actor virdo("virdo.png", "Virdo");
+    virdo.setPosition(600, 600);
 
-// Solicita el cierre de la ventana (no destruye el objeto aún)
-void Window::close() {
-    if (m_windowPtr && m_windowPtr->isOpen()) {
-        m_windowPtr->close();
+    Actor wario("wario.png", "Wario");
+    wario.setPosition(800, 600);
+
+    std::vector<Actor*> racers = { &princesa, &sonic, &virdo, &wario };
+
+    // Loop principal
+    while (window.isOpen()) {
+        window.handleEvents();
+        window.clear();
+
+        // Dibujar pista primero
+        pista.render(window.getInternal());
+
+        // Dibujar corredores
+        for (auto* r : racers)
+            r->render(window.getInternal());
+
+        window.display();
     }
-}
 
-// Libera recursos asociados a la ventana y resetea el puntero
-void Window::destroy() {
-    if (m_windowPtr) {
-        if (m_windowPtr->isOpen()) m_windowPtr->close();
-        m_windowPtr.reset();
-    }
-}
-
-// Acceso directo al sf::RenderWindow subyacente (referencia no nula asumida)
-sf::RenderWindow& Window::getInternal() {
-    // Si necesitas más seguridad, podrías añadir un assert aquí.
-    return *m_windowPtr;
+    return 0;
 }

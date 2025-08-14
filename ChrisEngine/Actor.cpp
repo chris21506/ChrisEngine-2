@@ -1,59 +1,102 @@
-#include "ECS/Actor.h"
-#include "CShape.h"
-#include "ECS/Transform.h"
-#include "ECS/Texture.h"
-#include "Window.h"
+#include <SFML/Graphics.hpp>
+#include <memory>
+#include <vector>
+#include <string>
+#include <iostream>
 
-void Actor::update(float dt) {
-    (void)dt;
-    auto xf = getComponent<Transform>();
-    if (!xf) return;
+// ------------------------------------------------
+// Clase Actor: representa corredor o pista
+// ------------------------------------------------
+class Actor {
+    sf::Sprite sprite;
+    sf::Texture texture;
 
-    if (auto shape = getComponent<CShape>()) {
-        if (auto raw = shape->getShape()) xf->applyTo(*raw);
-    }
-    if (auto tex = getComponent<Texture>()) {
-        tex->setPosition(xf->getPosition());
-        auto s = xf->getScale();
-        if (s.x == 0.f && s.y == 0.f) s = { 1.f, 1.f }; // <- Fallback
-        tex->setScale(s);
-        tex->setRotation(xf->getRotation()); // en Texture.cpp usa sf::degrees(...)
-    }
-}
+public:
+    std::string name;
 
-void Actor::render(const EngineUtilities::TSharedPointer<Window>& window) {
-    // Solo el Track dibuja la shape (y nada más)
-    if (m_name == "Track") {
-        if (auto shape = getComponent<CShape>()) {
-            shape->render(window);
+    Actor(const std::string& filename, const std::string& actorName) : name(actorName) {
+        if (!texture.loadFromFile(filename)) {
+            std::cerr << "Error cargando textura: " << filename << "\n";
         }
-        return; // <- evita dibujar el sprite del Track (segunda capa de mapa)
+        sprite.setTexture(texture);
+        // Centrar origen para rotaciones escalado
+        sf::FloatRect bounds = sprite.getLocalBounds();
+        sprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
     }
 
-    // Los demás actorean (racers) dibujan su sprite
-    if (auto textureComp = getComponent<Texture>()) {
-        textureComp->render(window);
+    void setPosition(float x, float y) { sprite.setPosition(x, y); }
+    void setScale(float sx, float sy) { sprite.setScale(sx, sy); }
+    void setRotation(float angle) { sprite.setRotation(angle); }
+
+    void render(sf::RenderWindow& window) { window.draw(sprite); }
+};
+
+// ------------------------------------------------
+// Clase Window: encapsula sf::RenderWindow
+// ------------------------------------------------
+class ChrisEngineWindow {
+    std::unique_ptr<sf::RenderWindow> window;
+
+public:
+    ChrisEngineWindow(int width, int height, const std::string& title) {
+        window = std::make_unique<sf::RenderWindow>(sf::VideoMode(width, height), title);
+        window->setFramerateLimit(60);
     }
-}
 
-void Actor::setTexture(const EngineUtilities::TSharedPointer<Texture>& texture) {
-    if (texture.isNull()) return;
+    bool isOpen() const { return window->isOpen(); }
+    void clear() { window->clear(sf::Color::Black); }
+    void display() { window->display(); }
+    void draw(sf::Drawable& drawable) { window->draw(drawable); }
 
-    // Reemplaza o agrega el componente Texture del actor
-    bool replaced = false;
-    for (auto& comp : components) {
-        if (comp.template dynamic_pointer_cast<Texture>()) {
-            comp = texture;
-            replaced = true;
-            break;
+    void handleEvents() {
+        sf::Event event;
+        while (window->pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                window->close();
         }
     }
-    if (!replaced) components.push_back(texture);
 
-    // Solo el actor "Track" recibe la textura en su CShape
-    if (m_name == "Track") {
-        if (auto shape = getComponent<CShape>()) {
-            shape->setTexture(texture);
-        }
+    sf::RenderWindow& getInternal() { return *window; }
+};
+
+// ------------------------------------------------
+// Función principal
+// ------------------------------------------------
+int main() {
+    ChrisEngineWindow window(1024, 768, "ChrisEngine Carrera");
+
+    // Crear actores
+    Actor pista("pista de carreras.png", "Pista");
+    pista.setPosition(512, 384); // centro
+
+    Actor princesa("princesa.png", "Princesa");
+    princesa.setPosition(200, 600);
+
+    Actor sonic("sonic.png", "Sonic");
+    sonic.setPosition(400, 600);
+
+    Actor virdo("virdo.png", "Virdo");
+    virdo.setPosition(600, 600);
+
+    Actor wario("wario.png", "Wario");
+    wario.setPosition(800, 600);
+
+    std::vector<Actor*> racers = { &princesa, &sonic, &virdo, &wario };
+
+    // Loop principal
+    while (window.isOpen()) {
+        window.handleEvents();
+        window.clear();
+
+        // Dibujar pista primero
+        pista.render(window.getInternal());
+
+        // Dibujar corredores
+        for (auto* r : racers)
+            r->render(window.getInternal());
+
+        window.display();
     }
+
+    return 0;
 }

@@ -1,119 +1,72 @@
-#include "BaseApp.h"
+﻿// ChrisEngineApp.cpp
+#include "ChrisEngineApp.h"
+#include "ChrisEnginePrerequisites.h"
+#include "Window.h"
+#include "EngineGUI.h"
+#include "ChrisEngineRacer.h"
 #include "ECS/Transform.h"
 #include "CShape.h"
 
-#include <SFML/Graphics.hpp>
-
+#include <vector>
 #include <cmath>
 #include <iostream>
-#include <algorithm>
-#include <fstream>
 #include <filesystem>
 
-BaseApp::~BaseApp() {
-}
-
-int BaseApp::run() {
-    if (!init()) {
-        ERROR("ChrisEngine", "run", "Initialization failed");
+// ---------------- Helper geométrico ----------------
+namespace {
+    inline float vlen(const Vector2f& v) { return sqrt(v.x * v.x + v.y * v.y); }
+    inline Vector2f vnorm(const Vector2f& v) {
+        float L = vlen(v); return (L > 1e-6f) ? Vector2f{ v.x / L, v.y / L } : Vector2f{ 0.f,0.f };
     }
+    inline Vector2f vperp(const Vector2f& v) { return Vector2f{ -v.y, v.x }; }
 
-    while (m_windowPtr->isOpen()) {
-        m_windowPtr->handleEvents(m_engineGUI);
-        update();
-        render();
-    }
+    // Densificar polilínea cerrada
+    std::vector<Vector2f> densifyClosed(const std::vector<Vector2f>& pts, float maxSegLen) {
+        std::vector<Vector2f> out;
+        if (pts.size() < 2) return out;
+        int N
+            // ==================== ChrisEngine BaseApp ====================
+            class ChrisEngine : public BaseApp {
+            std::vector<TSharedPointer<A_Racer>> m_racers;
+            TSharedPointer<Actor> m_trackActor;
+            std::vector<sf::Vector2f> m_path;
+            int m_playerIdx = -1;
 
-    destroy();
-    return 0;
-}
+            public:
+                bool init() {
+                    m_windowPtr = MakeShared<Window>(1920, 1080, "ChrisEngine");
+                    gui.init(m_windowPtr);
 
-bool BaseApp::init() {
-    ResourceManager& resourceMan = ResourceManager::getInstance();
+                    // Carga pista
+                    resourceMan.loadTexture("Sprites/PistaDeCarreras", "png");
+                    auto trackTex = resourceMan.getTexture("Sprites/PistaDeCarreras");
 
-    m_windowPtr = EngineUtilities::MakeShared<Window>(1920, 1080, "ChrisEngine");
-    if (!m_windowPtr) {
-        ERROR("ChrisEngine", "init", "Failed to create window");
-        return false;
-    }
+                    m_trackActor = MakeShared<Actor>("Pista");
+                    auto sh = m_trackActor->getComponent<CShape>();
+                    sh->createShape(ShapeType::RECTANGLE);
+                    sh->setFillColor(sf::Color::White);
+                    sh->setScale({ 1920.f / trackTex->getTexture().getSize().x,
+                                  1080.f / trackTex->getTexture().getSize().y });
+                    m_trackActor->setTexture(trackTex);
 
-    // Inicializar GUI
-    m_engineGUI.init(m_windowPtr);
+                    // Crea corredores: Princesa, Sonic, Virdo, Wario
+                    auto r1 = MakeShared<A_Racer>("Princesa", 1);
+                    auto r2 = MakeShared<A_Racer>("Sonic", 2);
+                    auto r3 = MakeShared<A_Racer>("Virdo", 3);
+                    auto r4 = MakeShared<A_Racer>("Wario", 4);
 
-    // Lista de texturas y nombres de corredores
-    struct RacerInfo {
-        std::string name;
-        std::string texturePath;
-    } racersData[] = {
-        {"Sonic",    "Sprites/sonic.png"},
-        {"Wario",    "Sprites/wario.png"},
-        {"Birdo",    "Sprites/virdo.png"},
-        {"Princesa", "Sprites/princesa.png"}
-    };
+                    // Asigna texturas
+                    resourceMan.loadTexture("Sprites/Princesa", "png");
+                    resourceMan.loadTexture("Sprites/Sonic", "png");
+                    resourceMan.loadTexture("Sprites/Virdo", "png");
+                    resourceMan.loadTexture("Sprites/Wario", "png");
 
-    // Crear actores corredores
-    int playerId = 1;
-    for (auto& info : racersData) {
-        auto racer = EngineUtilities::MakeShared<A_Racer>(info.name, playerId++);
-        if (racer) {
-            // Cargar textura
-            if (!resourceMan.loadTexture(info.texturePath, "")) {
-                MESSAGE("ChrisEngine", "init", "Can't load texture: " + info.texturePath);
-            }
-            racer->setTexture(resourceMan.getTexture(info.texturePath));
-            racer->getComponent<Transform>()->setPosition(sf::Vector2f(100.f * playerId, 200.f));
-            racer->setMaxSpeed(200.0f);
-            m_actors.push_back(racer);
-        }
-    }
+                    if (auto t = resourceMan.getTexture("Sprites/Princesa"); !t.isNull()) r1->setTexture(t);
+                    if (auto t = resourceMan.getTexture("Sprites/Sonic"); !t.isNull()) r2->setTexture(t);
+                    if (auto t = resourceMan.getTexture("Sprites/Virdo"); !t.isNull()) r3->setTexture(t);
+                    if (auto t = resourceMan.getTexture("Sprites/Wario"); !t.isNull()) r4->setTexture(t);
 
-    // Crear pista de carreras
-    auto pista = EngineUtilities::MakeShared<Actor>("Pista");
-    if (pista) {
-        if (!resourceMan.loadTexture("Sprites/pista_de_carreras.png", "")) {
-            MESSAGE("ChrisEngine", "init", "Can't load pista texture");
-        }
-        pista->setTexture(resourceMan.getTexture("Sprites/pista_de_carreras.png"));
-        pista->getComponent<Transform>()->setPosition(sf::Vector2f(960.f, 540.f));
-        m_actors.push_back(pista);
-    }
-
-    return true;
-}
-
-void BaseApp::update() {
-    if (!m_windowPtr.isNull()) {
-        m_windowPtr->update();
-    }
-
-    // Actualizar GUI
-    m_engineGUI.update(m_windowPtr, m_windowPtr->deltaTime);
-    m_engineGUI.outliner(m_actors);
-    m_engineGUI.inspector(m_actors);
-
-    // Actualizar actores
-    for (auto& actor : m_actors) {
-        if (!actor.isNull()) {
-            actor->update(m_windowPtr->deltaTime.asSeconds());
-        }
-    }
-}
-
-void BaseApp::render() {
-    if (!m_windowPtr) return;
-
-    m_windowPtr->clear();
-
-    for (auto& actor : m_actors) {
-        if (!actor.isNull()) {
-            actor->render(m_windowPtr);
-        }
-    }
-
-    m_engineGUI.render(m_windowPtr);
-    m_windowPtr->display();
-}
-
-void BaseApp::destroy() {
-    m_engineGUI.destroy();
-}
+                    m_racers = { r1,r2,r3,r4 };
+                    return true;
+                }
+        };
